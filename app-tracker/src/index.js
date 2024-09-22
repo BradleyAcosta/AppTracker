@@ -3,32 +3,61 @@ import ReactDOM from 'react-dom/client';
 import './index.css'; // Importing CSS
 
 const user = {
-name: 'Bradley' 
 };
 
 
-function AppName() {
-    return ( 
-  <>
-    <h1>Welcome To TrackerApp</h1>
-    
-    <p>This is a simple app to track your daily jobs {user.name} applied</p>
 
-    </>
-    );
-    
+function Register() {
+  return ( 
+<>
+  <h1>Register</h1>
+        <div>
+          <form>
+            <h2>Create an Account</h2>
+          
+                <label htmlFor="name" >Name:</label>
+                <input
+                  placeholder="Name"
+                    type="text"
+                    id="name"
+                    required
+                />
+                <br />
+
+                <label htmlFor="email">Email:</label>
+                <input
+                  placeholder="example@example.com"
+                  type="email"
+                  id="email"
+                   
+                />
+                <br />
+
+                <label htmlFor="password">Password:</label>
+                <input
+                placeholder="Password"
+                    type="password"
+                    id="password"
+          
+                />
+                <br />
+
+                <button type="submit">Submit</button>
+            </form>
+            </div>
+</>
+  );
+  
 }
 
-function userAcc(){
 
-}
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
-    <AppName/>
+    <Register/>
+  
     <userAcc/>
   </React.StrictMode>
 );
