@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Link } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './index.css'; // Importing CSS
 
@@ -15,9 +16,9 @@ function Register() {
           <form>
             <h2>Create an Account</h2>
           
-                <label htmlFor="name" >Name:</label>
+                <label htmlFor="username" >Username:</label>
                 <input
-                  placeholder="Name"
+                  placeholder="username"
                     type="text"
                     id="name"
                     required
@@ -43,15 +44,16 @@ function Register() {
                 <br />
 
                 <button type="submit">Submit</button>
+
+
+                <h3> Have an account? <Link to = "/Login">Login</Link></h3>
+              
             </form>
             </div>
 </>
   );
   
 }
-
-
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
